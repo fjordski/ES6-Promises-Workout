@@ -1,4 +1,4 @@
-function generatListItems(employees)  {
+function generateListItems(employees)  {
     var statusHTML = '';
     for (var i=0; i<employees.length; i += 1) {
         if (employees[i].inoffice === true) {
@@ -42,7 +42,7 @@ function getJSON(url) {
 }
 
 
-var p = getJSON('../data/employees.json').then(generatListItems)
+var p = getJSON('../data/employees.json').then(generateListItems)
                                          .then(generateUnorderedList)
                                          .then(addEmployeesToPage).catch(function(e){
                                             console.log(e);
